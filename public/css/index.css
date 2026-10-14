@@ -1,0 +1,29 @@
+
+.fraunces {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+.smooch-sans {
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+#maincontainer {
+  width:70%;
+  min-height:500px;
+  background:white;
+  box-shadow:0px 4px 4px 4px gray;
+  margin-top:20px;
+}
+
+#bg_img {
+  min-height:500px;
+  width:100%;
+}
