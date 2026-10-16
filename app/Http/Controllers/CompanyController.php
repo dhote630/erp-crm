@@ -38,12 +38,13 @@ class CompanyController extends Controller
       // print_r($this->loginLink);
       $this->founderEmail = $this->formdata['founder_email'];
       // print_r($this->founderEmail);
-      Mail::to($this->founderEmail)->send(new loginLinkMail());
+      Mail::to($this->founderEmail)->send(new loginLinkMail($this->founderEmail,$this->finalPass,$this->loginLink));
       $this->formdata['company_slug'] = $this->cmp_slug;
-      $this->formdata['company_link'] = $this->loginLink;
+      $this->formdata['login_link'] = $this->loginLink;
       $this->formdata['password'] = md5($this->finalPass);
       // print_r($this->formdata);
-      // $this->newcmp = new Company($this->formdata);
-      // $this->newcmp->save();
+      $this->newcmp = new Company($this->formdata);
+      $this->newcmp->save();
+      return Response()->json(["msg"=>"company created"],200);
     }
 }

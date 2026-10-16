@@ -16,9 +16,14 @@ class loginLinkMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+     public $userEmail;
+     public $userPass;
+     public $loginLink;
+    public function __construct($email,$pass,$link)
     {
-        //
+        $this->userEmail = $email;
+        $this->userPass = $pass;
+        $this->loginLink = $link;
     }
 
     /**
@@ -28,6 +33,8 @@ class loginLinkMail extends Mailable
      */
     public function build()
     {
-        return $this->view('loginEmail');
+        return $this->view('loginEmail',["email"=>$this->userEmail,
+      "password"=>$this->userPass,
+      "link"=>$this->loginLink]);
     }
 }
