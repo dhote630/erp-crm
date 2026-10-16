@@ -24,7 +24,7 @@
          <img src="/images/pic.jpg" id="bg_img"/>
       </div>
       <div class="col-md-7">
-       <form>
+       <form id="companyForm">
           <p class="fraunces text-center p-0 m-0 mb-1">Enterprise Resource Planning</p>
           <p class="smooch-sans text-center p-0 m-0 mb-1"> Customer Relationship Management</p>
 
@@ -33,32 +33,32 @@
        <div class="step-1">
         <div class="mb-2">
           <label>Enter Company name</label>
-          <input class="form-control require_input"/>
+          <input class="form-control require_input" name="company_name"/>
         </div>
         <div class="mb-2">
           <label>Enter Company Email</label>
-          <input class="form-control"/>
+          <input class="form-control" name="company_email"/>
         </div>
         <div class="mb-2">
           <label>Enter Company Mobile</label>
-          <input class="form-control"/>
+          <input class="form-control" name="company_mobile"/>
         </div>
         <div class="mb-2">
           <label>Enter company Established Date</label>
-          <input type="date" class="form-control require_input"/>
+          <input type="date" class="form-control require_input" name="established_date"/>
         </div>
         <div class="mb-2">
           <label>Enter website</label>
-          <input  class="form-control"/>
+          <input  class="form-control" name="company_website"/>
         </div>
         <div class="d-flex">
          <div class="w-50 px-1">
-           <input placeholder="Enter City" class="form-control mb-1 require_input"/>
-           <input placeholder="Enter State" class="form-control mb-1 require_input"/>
+           <input placeholder="Enter City" class="form-control mb-1 require_input" name="city"/>
+           <input placeholder="Enter State" class="form-control mb-1 require_input" name="state"/>
          </div>
          <div class="w-50 px-1">
-           <input placeholder="Enter Country" class="form-control mb-1 require_input"/>
-           <input placeholder="Enter Pincode" class="form-control mb-1 require_input"/>
+           <input placeholder="Enter Country" class="form-control mb-1 require_input" name="country"/>
+           <input placeholder="Enter Pincode" class="form-control mb-1 require_input" name="pincode"/>
          </div>
        </div>
        <div class="text-end ">
@@ -71,23 +71,23 @@
      <div class="d-none step-2">
        <div class="mb-2">
          <label>Enter Founder Name</label>
-         <input class="form-control require_input"/>
+         <input class="form-control require_input" name="founder_name"/>
        </div>
        <div class="mb-2">
          <label>Enter Founder Email</label>
-         <input class="form-control require_input"/>
+         <input class="form-control require_input" name="founder_email"/>
        </div>
        <div class="mb-2">
          <label>Enter Founder Mobile</label>
-         <input class="form-control require_input"/>
+         <input class="form-control require_input" name="founder_mobile"/>
        </div>
        <div class="mb-2">
          <label>Facebook Page</label>
-         <input class="form-control"/>
+         <input class="form-control" name="facebook_page"/>
        </div>
        <div class="mb-2">
          <label>Twitter Page</label>
-         <input class="form-control"/>
+         <input class="form-control" name="twitter_page"/>
        </div>
        <div class="d-flex justify-content-between">
          <button type="button" class="btn btn-danger rounded-0" id="prev_2_btn">Prev</button>
@@ -99,11 +99,11 @@
     <div class="d-none step-3">
       <div class="mb-2">
         <label>Enter Whatsapp Number</label>
-        <input class="form-control require_input"/>
+        <input class="form-control require_input" name="whatsapp_number"/>
       </div>
       <div class="mb-2">
         <label>Select Category</label>
-        <select class="form-control">
+        <select class="form-control" name="category">
          <option>Education</option>
          <option>Software</option>
          <option>Hardware</option>
@@ -111,7 +111,7 @@
       </div>
       <div class="d-flex justify-content-between">
         <button type="button" class="btn btn-danger" id="prev_3_btn">Prev</button>
-        <button type="button" class="btn btn-dark">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
       </div>
     </div>
 
