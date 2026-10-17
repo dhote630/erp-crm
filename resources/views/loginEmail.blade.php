@@ -7,9 +7,9 @@
   <body>
   <div style="padding:20px;width:100%;background-color:pink;">
     <h1 style="text-align:red">User Details</h1>
-    <p style="text-align:black">{{$email}}</p>
+    <p style="color:black">{{$email}}</p>
     <p>{{$password}}</p>
-    <a style="text-align:black" href="{{$link}}">{{$link}}</a>
+    <a style="color:black" href="{{$link}}">{{$link}}</a>
   </div>
   </body>
 </html>

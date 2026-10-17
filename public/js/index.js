@@ -80,7 +80,11 @@ $("#companyForm").submit(function(e){
     processData:false,
     contentType:false,
     success:function(res){
-      console.log(res);
+      Swal.fire({
+       title: "Notification",
+       text: "company created",
+       icon: "success"
+      });
     }
   })
 });
