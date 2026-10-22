@@ -14,11 +14,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
 
-   <h1>Welcome to login page</h1>
+   <div id="loginBox">
+     <form id="loginForm">
+       <div class="mb-2 mt-2">
+         <input class="form-control" id="login_email" placeholder="Enter Founder Email"/>
+       </div>
+       <div class="mb-2 mt-2">
+         <input class="form-control" id="login_password" placeholder="Enter Password"/>
+       </div>
+       <button class="btn" id="loginBtn">Login</button>
+     </form>
+   </div>
+
   <script src="/js/index.js"></script>
   </body>
 </html>

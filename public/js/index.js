@@ -70,6 +70,18 @@ $(".require_input").on("input",function(){
   }
 });
 
+function nextSlide(x,y){
+  $(x).addClass("d-none");
+  $(y).removeClass("d-none");
+  $(y).addClass("animate__animated animate__slideUpLeft");
+}
+
+function prevSlide(x,y){
+  $(x).addClass("d-none");
+  $(y).removeClass("d-none");
+  $(y).addClass("animate__animated animate__slideUp");
+}
+
 $("#companyForm").submit(function(e){
   e.preventDefault();
   var formdata = new FormData(e.target);
@@ -80,28 +92,44 @@ $("#companyForm").submit(function(e){
     processData:false,
     contentType:false,
     success:function(res){
+      console.log(res);
       Swal.fire({
        title: "Notification",
        text: "company created",
        icon: "success"
+     });
+   },
+   error:function(err){
+     var obj = err.responseJSON;
+     var title = obj.msg;
+     var column = obj.column;
+    Swal.fire({
+     icon: "error",
+     title: title,
+     text: column + "Already exists"
       });
-    }
+   }
   })
 });
 
 });
 
-
-
-function nextSlide(x,y){
-  $(x).addClass("d-none");
-  $(y).removeClass("d-none");
-  $(y).addClass("animate__animated animate__slideUpLeft");
-}
-
-
-function prevSlide(x,y){
-  $(x).addClass("d-none");
-  $(y).removeClass("d-none");
-  $(y).addClass("animate__animated animate__slideUp");
-}
+$("#loginForm").submit(function(e){
+  e.preventDefault();
+  $.ajax({
+    type:"POST",
+    url:"/api/company-login",
+    data:{
+      email:$("#login_email").val(),
+      password:$("#login_password").val()
+    },
+    success:function(res){
+      var msg = res.msg;
+      Swal.fire(msg);
+    },
+    error:function(err){
+      var msg = err.responseJSON.msg;
+      Swal.fire(msg);
+    }
+  })
+});

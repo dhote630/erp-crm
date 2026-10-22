@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('{cmp_name}',function(){
-    return view('login');
-});
+Route::get('{cmp_name}',"CompanyController@verifyCompany");

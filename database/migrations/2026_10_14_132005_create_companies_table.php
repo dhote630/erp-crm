@@ -15,23 +15,23 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->string("company_name");
-            $table->string("company_email")->nullable();
-            $table->bigInteger("company_mobile")->nullable();
-            $table->string("company_website");
+            $table->string("company_name",200);
+            $table->string("company_email")->nullable()->unique();
+            $table->bigInteger("company_mobile")->nullable()->unique();
+            $table->string("company_website")->unique();
             $table->dateTime("established_date");
-            $table->string("city");
-            $table->string("state");
+            $table->string("city",200);
+            $table->string("state",255);
             $table->string("country");
             $table->integer("pincode");
             $table->string("founder_name");
-            $table->string("founder_email");
-            $table->bigInteger("founder_mobile");
+            $table->string("founder_email")->unique();
+            $table->bigInteger("founder_mobile")->unique();
             $table->string("facebook_page")->nullable();
             $table->string("twitter_page")->nullable();
-            $table->string("whatsapp_number");
+            $table->string("whatsapp_number")->unique();
             $table->string("category");
-            $table->string("company_slug");
+            $table->string("company_slug")->unique();
             $table->string("login_link");
             $table->string("password");
             $table->timestamps();

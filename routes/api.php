@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post("/create-company","CompanyController@createCompany");
+
+Route::post("/company-login","CompanyController@loginCompany");
