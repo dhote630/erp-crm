@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('{cmp_name}',"CompanyController@verifyCompany");
+
+Route::get("/admin/dashboard",function(){
+  return view('admintemplate');
+});

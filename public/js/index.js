@@ -126,6 +126,12 @@ $("#loginForm").submit(function(e){
     success:function(res){
       var msg = res.msg;
       Swal.fire(msg);
+      var token = res.token;
+      localStorage.setItem("erp_token",token);
+      setTimeout(function(){
+        window.location="/admin/dashboard";
+      }
+      ,1000);
     },
     error:function(err){
       var msg = err.responseJSON.msg;
