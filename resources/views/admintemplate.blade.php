@@ -54,10 +54,10 @@
                 <li class="nav-item">
                   <a class="nav-link text-dark" href="#">Jobs</a>
                 </li>
+                <button type="button" class="btn btn-sm">
+                  <span class="material-icons">exit_to_app</span>
+                </button>
               </ul>
-            <button type="button" class="btn btn-sm">
-              <span class="material-icons">exit_to_app</span>
-            </button>
           </div>
 
         <div class="p-4">
